@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/imagen_login"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/uto"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/titulo_login"/>
+
+    <TextView
+        android:id="@+id/titulo_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SIMO"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/imagen_login"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tit_user"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tit_user"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/titulo_login"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tit_pass">
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/usuario"
+            android:hint="Usuario"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tit_pass"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/tit_user"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/loguear"
+        app:passwordToggleEnabled="true">
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/password"
+            android:hint="Contraseña"
+            android:inputType="textPassword"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Iniciar"
+        android:textAllCaps="false"
+        android:id="@+id/loguear"
+        android:layout_margin="10dp"
+        android:background="@drawable/botones"
+        android:textColor="#ffff"
+        app:layout_constraintTop_toBottomOf="@id/tit_pass"
+        app:layout_constraintStart_toStartOf="@id/tit_pass"
+        app:layout_constraintEnd_toEndOf="@id/tit_pass"
+        app:layout_constraintBottom_toTopOf="@id/invitado"/>
+
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:textSize="12sp"
+        android:text="Iniciar como invitado"
+        android:textAllCaps="false"
+        android:id="@+id/invitado"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@id/loguear"
+        app:layout_constraintStart_toStartOf="@id/loguear"
+        app:layout_constraintEnd_toEndOf="@id/loguear"
+        app:layout_constraintBottom_toTopOf="@id/leyenda_dtic"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/leyenda_dtic"
+        android:text="@string/ley_dtic"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toBottomOf="@id/invitado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textAlignment="center"/>
+
+</android.support.constraint.ConstraintLayout>

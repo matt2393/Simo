@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/uto"
+        android:background="@color/colorPrimary"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aplicación para la información de la universidad"
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textAlignment="center"
+        android:layout_gravity="bottom"
+        android:background="#7a000000"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Entrar"
+        android:background="@drawable/texto_curvo"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:layout_gravity="end"
+        android:layout_margin="16dp"
+        android:id="@+id/entrar_inicio"/>
+
+
+
+</android.support.design.widget.CoordinatorLayout>

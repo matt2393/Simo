@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbars="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Facultad Nacional de Ingenieria"
+        android:id="@+id/facultad"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Carrera:"
+            android:id="@+id/tit_carrera"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintTop_toBottomOf="@id/facultad"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/carrera"
+            app:layout_constraintBottom_toTopOf="@id/tit_programa"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Ingenieria de sistemas"
+            android:id="@+id/carrera"
+            android:textSize="14sp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintTop_toTopOf="@id/tit_carrera"
+            app:layout_constraintBottom_toBottomOf="@id/tit_carrera"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tit_carrera"/>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Programa:"
+            android:id="@+id/tit_programa"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintTop_toBottomOf="@id/tit_carrera"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/programa"
+            app:layout_constraintBottom_toTopOf="@id/tit_sede"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Ingenieria de sistemas Gestion de la informacion"
+            android:id="@+id/programa"
+            android:textSize="14sp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintTop_toTopOf="@id/tit_programa"
+            app:layout_constraintBottom_toBottomOf="@id/tit_programa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tit_programa"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sede:"
+            android:id="@+id/tit_sede"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintTop_toBottomOf="@id/tit_programa"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/sede"
+            app:layout_constraintBottom_toTopOf="@id/tit_tipo_matricula"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Orurodsadasdsadadada"
+            android:id="@+id/sede"
+            android:textSize="14sp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintTop_toTopOf="@id/tit_sede"
+            app:layout_constraintBottom_toBottomOf="@id/tit_sede"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tit_sede" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipo Matricula:"
+            android:id="@+id/tit_tipo_matricula"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintTop_toBottomOf="@id/tit_sede"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tipo_matricula"
+            app:layout_constraintBottom_toTopOf="@id/tit_tipo_est"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Observado"
+            android:id="@+id/tipo_matricula"
+            android:textSize="14sp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintTop_toTopOf="@id/tit_tipo_matricula"
+            app:layout_constraintBottom_toBottomOf="@id/tit_tipo_matricula"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tit_tipo_matricula"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipo Estudiante:"
+            android:id="@+id/tit_tipo_est"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintTop_toBottomOf="@id/tit_tipo_matricula"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tipo_est"
+            app:layout_constraintBottom_toTopOf="@id/tit_tipo_ad"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Antiguo"
+            android:id="@+id/tipo_est"
+            android:textSize="14sp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintTop_toTopOf="@id/tit_tipo_est"
+            app:layout_constraintBottom_toBottomOf="@id/tit_tipo_est"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tit_tipo_est"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipo Admisión:"
+            android:id="@+id/tit_tipo_ad"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintTop_toBottomOf="@id/tit_tipo_est"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tipo_ad"
+            app:layout_constraintBottom_toTopOf="@id/ges_ac"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Antiguo"
+            android:id="@+id/tipo_ad"
+            android:textSize="14sp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintTop_toTopOf="@id/tit_tipo_ad"
+            app:layout_constraintBottom_toBottomOf="@id/tit_tipo_ad"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tit_tipo_ad"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gestión Actual:"
+            android:id="@+id/tit_ges_ac"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintTop_toBottomOf="@id/tit_tipo_ad"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ges_ac"
+            app:layout_constraintBottom_toTopOf="@id/tit_ges_in"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="2/2014"
+            android:id="@+id/ges_ac"
+            android:textSize="14sp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintTop_toTopOf="@id/tit_ges_ac"
+            app:layout_constraintBottom_toBottomOf="@id/tit_ges_ac"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tit_ges_ac"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gestión de Ingreso:"
+            android:id="@+id/tit_ges_in"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintTop_toBottomOf="@id/tit_ges_ac"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ges_in"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Antiguo"
+            android:id="@+id/ges_in"
+            android:textSize="14sp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintTop_toTopOf="@id/tit_ges_in"
+            app:layout_constraintBottom_toBottomOf="@id/tit_ges_in"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tit_ges_in"/>
+    </android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.NestedScrollView>
