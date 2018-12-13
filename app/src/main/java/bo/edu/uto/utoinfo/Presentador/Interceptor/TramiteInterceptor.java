@@ -1,26 +1,24 @@
 package bo.edu.uto.utoinfo.Presentador.Interceptor;
 
+import java.util.List;
+
 import bo.edu.uto.utoinfo.ApiRequest.RetrofitSingleton;
-import bo.edu.uto.utoinfo.Modelos.Persona;
+import bo.edu.uto.utoinfo.Modelos.Tramite;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 
-public class PersonaInterceptor {
-
-    public static abstract class OnFinishPersona{
-
-        protected abstract void onLoad(Persona p);
+public class TramiteInterceptor {
+    public static abstract class OnFinishTramite{
+        protected abstract void onLoadTramite(List<Tramite> tramites);
         protected abstract void onError(Throwable e);
-
     }
-
-    public void load(String id_p,OnFinishPersona onFinishPersona){
+    public void loadTramite(String id_tipo,OnFinishTramite onFinishTramite){
         RetrofitSingleton.getInstance().addReq(
                 RetrofitSingleton.getInstance().getRequests()
-                .persona(id_p)
+                .tramites(id_tipo)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(onFinishPersona::onLoad,onFinishPersona::onError)
+                .subscribe(onFinishTramite::onLoadTramite,onFinishTramite::onError)
         );
     }
 }

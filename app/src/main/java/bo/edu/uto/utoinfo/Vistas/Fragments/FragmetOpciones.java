@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import bo.edu.uto.utoinfo.R;
+import bo.edu.uto.utoinfo.Tools.Const;
 
 public class FragmetOpciones extends Fragment implements View.OnClickListener {
     public final static String TAG="FragmentOpciones";
@@ -61,8 +62,12 @@ public class FragmetOpciones extends Fragment implements View.OnClickListener {
             case R.id.datos_per:
                 addFr(FragmentDatosPer.newInstance(id_p),FragmentDatosPer.TAG);
                 break;
-            case R.id.matricula: break;
-            case R.id.tramites: break;
+            case R.id.matricula:
+                addFr(FragmentMatricula.newInstance(id_p,id_e),FragmentMatricula.TAG);break;
+            case R.id.tramites:
+                addFr(FragmentTramites.newIntance(Const.TIPO,"Tipos de Trámites","0",R.id.contenedor_main),
+                        FragmentTramites.TAG);
+                break;
         }
     }
 

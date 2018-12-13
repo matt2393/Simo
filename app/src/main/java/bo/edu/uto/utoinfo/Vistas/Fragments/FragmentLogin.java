@@ -1,7 +1,9 @@
 package bo.edu.uto.utoinfo.Vistas.Fragments;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TextInputEditText;
@@ -66,7 +68,14 @@ public class FragmentLogin extends Fragment implements View.OnClickListener,
                     loginPresenter.login(user.getText().toString(),pass.getText().toString());
                 }
                 break;
-            case R.id.invitado: break;
+            case R.id.invitado:
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.contenedor_login,
+                                FragmentTramites.newIntance(Const.TIPO,"Tipos de Trámites","0",R.id.contenedor_login),
+                                FragmentTramites.TAG)
+                        .addToBackStack(null)
+                        .commit();
+                break;
         }
     }
 
@@ -97,9 +106,17 @@ public class FragmentLogin extends Fragment implements View.OnClickListener,
 
     @Override
     public void loadUser(Usuario us) {
+        SharedPreferences preferences=PreferenceManager.
+                getDefaultSharedPreferences(getContext().getApplicationContext());
+        preferences.edit().putInt(Const.ID_E,login.getY())
+                .putInt(Const.ID_P,login.getX())
+                .putString(Const.DIP,us.getDip())
+                .putString(Const.NOM,us.getNombre())
+                .apply();
         Intent in=new Intent(getContext(),MainActivity.class);
         in.putExtra(Const.USUARIO,us);
         in.putExtra(Const.LOGIN,login);
         startActivity(in);
+        getActivity().finish();
     }
 }
